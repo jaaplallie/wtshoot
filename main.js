@@ -1,8 +1,16 @@
 // Modules to control application life and create native browser window
-const { app, BrowserWindow } = require('electron')
+const electron = require('electron')
+const { app, Menu, BrowserWindow } = electron
+const url = require('url')
 const path = require('path')
+const isMac = process.platform === 'darwin'
 
 require('update-electron-app')()
+
+//Set application menu
+Menu.setApplicationMenu(null)
+//const menu = Menu.buildFromTemplate(template)
+//Menu.setApplicationMenu(menu)
 
 function createWindow () {
   // Create the browser window.
@@ -13,6 +21,8 @@ function createWindow () {
       preload: path.join(__dirname, 'preload.js')
     }
   })
+
+  mainWindow.setIcon(path.join(__dirname, '/src/images/logo.png'));
 
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
@@ -38,7 +48,7 @@ app.whenReady().then(() => {
 // for applications and their menu bar to stay active until the user quits
 // explicitly with Cmd + Q.
 app.on('window-all-closed', function () {
-  if (process.platform !== 'darwin') app.quit()
+  if (isMac === false) app.quit()
 })
 
 // In this file you can include the rest of your app's specific main process
