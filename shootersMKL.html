@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Willem Tell Shoot</title>
+    <link rel="stylesheet" href="./src/core/style.css">
+    <link rel="stylesheet" href="./node_modules/materialize-css/dist/css/materialize.min.css">
+</head>
+<body>
+<header>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo center" onclick="goBack()">
+                <img src="./src/images/logo.png" width="50px" height="50px" alt=""/>
+                Willem Tell Shoot
+                <img src="./src/images/logo.png" width="50px" height="50px" alt=""/>
+            </a>
+        </div>
+    </nav>
+</header>
+<main>
+    <div class="container">
+        <div class="row center">
+            <h3>Schutters Meesterkaart Licht</h3>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row center">
+            <table>
+                <tr>
+                    <th>Company</th>
+                    <th>Contact</th>
+                    <th>Country</th>
+                </tr>
+                <tr>
+                    <td>Alfreds Futterkiste</td>
+                    <td>Maria Anders</td>
+                    <td>Germany</td>
+                </tr>
+                <tr>
+                    <td>Centro comercial Moctezuma</td>
+                    <td>Francisco Chang</td>
+                    <td>Mexico</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row center">
+        </div>
+    </div>
+</main>
+<footer class="page-footer">
+    <div class="footer-copyright">
+        <div class="container center">
+            © 2021 Jaap Koelewijn |
+            Node.js <span id="node-version"></span> |
+            Chromium <span id="chrome-version"></span> |
+            Electron <span id="electron-version"></span> ©
+        </div>
+    </div>
+</footer>
+
+<!-- You can also require other files to run in this process -->
+<script src="./node_modules/jquery/dist/jquery.js"></script>
+<script src="./node_modules/materialize-css/dist/js/materialize.min.js"></script>
+<script src="./renderer.js" type="application/javascript"></script>
+</body>
+</html>
